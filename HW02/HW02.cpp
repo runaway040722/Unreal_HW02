@@ -34,19 +34,18 @@ public:
 	void setPower(int power) { this->att = power; }
 	void setDefence(int defence) { this->def = defence; }
 	void setSpeed(int speed) {this->speed = speed;
-	}
+	} 
 
 	void printPlayerStatus() {
-		cout << "이름: " << name << endl;
-		cout << "직업: " << job << endl;
-		cout << "레벨: " << level << endl;
-		cout << "HP: " << hp << endl;
-		cout << "MP: " << mp << endl;
-		cout << "공격력: " << att << endl;
-		cout << "방어력: " << def << endl;
-		cout << "속도: " << speed << endl;
+		cout << "이름: " << getName() << endl;
+		cout << "직업: " << getJob() << endl;
+		cout << "레벨: " << getLevel() << endl;
+		cout << "HP: " << getHP() << endl;
+		cout << "MP: " << getMP() << endl;
+		cout << "공격력: " << getPower() << endl;
+		cout << "방어력: " << getDefence() << endl;
+		cout << "속도: " << getSpeed() << endl;
 	}
-
 
 };
 
@@ -66,10 +65,8 @@ public:
 	void attack()override
 	{
 		cout << "전사가 검을 휘두릅니다" << endl;
-		cout << att << "만큼의 데미지를 입혔습니다." << endl;
-	
-	}
-	
+		cout << getPower() << "만큼의 데미지를 입혔습니다." << endl;
+	}	
 };
 
 class Magician : public Player
@@ -87,7 +84,7 @@ public:
 	void attack()override
 	{
 		cout << "마법사가 주문을 외웁니다" << endl;
-		cout << att << "만큼의 데미지를 입혔습니다." << endl;
+		cout << getPower() << "만큼의 데미지를 입혔습니다." << endl;
 
 	}
 	
@@ -109,7 +106,7 @@ public:
 	void attack()override
 	{
 		cout << "도적이 기습을 합니다" << endl;
-		cout << att << "만큼의 데미지를 입혔습니다." << endl;
+		cout << getPower() << "만큼의 데미지를 입혔습니다." << endl;
 	}
 };
 
@@ -129,7 +126,7 @@ public:
 	void attack()override
 	{
 		cout << "궁수가 화살을 쏩니다" << endl;
-		cout << att << "만큼의 데미지를 입혔습니다." << endl;
+		cout << getPower() << "만큼의 데미지를 입혔습니다." << endl;
 	}
 };
 
